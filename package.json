@@ -1,0 +1,28 @@
+{
+  "name": "smartedu",
+  "version": "1.0.0",
+  "description": "Smart Education Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barisdvl/SmartEdu_Project.git"
+  },
+  "keywords": [
+    "smart",
+    "edu",
+    "education"
+  ],
+  "author": "Baris Develi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barisdvl/SmartEdu_Project/issues"
+  },
+  "homepage": "https://github.com/barisdvl/SmartEdu_Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
