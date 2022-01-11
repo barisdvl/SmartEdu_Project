@@ -1,0 +1,58 @@
+<%- include('partials/_header') -%>
+    <%- include('partials/_navigation') -%>
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>Course Single<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="row"> 
+                <div class="offset-1 col-lg-10 blog-post-single">
+                    <div class="blog-item">
+						<div class="image-blog">
+							<img src="/images/blog_single.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="post-content">
+
+							<% if (user && !(user.courses.includes(course._id))) { %>
+
+							<div class="post-date">
+								<form method="post" action="/courses/enroll" >
+									<input type="hidden" name="course_id" value="<%= course._id %>">
+									<button class="btn btn-lg btn-warning text-white">ENROLL</button>
+								</form>
+							</div>
+
+							<% } %>
+
+							<div class="meta-info-blog">
+								<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+							</div>
+							<div class="blog-title">
+								<h2><a href="#" title=""><%= course.name %></a></h2>
+							</div>
+							<div class="blog-desc">
+								<p><%= course.description %></p>
+								
+							</div>							
+						</div>
+					</div>
+					
+					<div class="blog-author">
+						<div class="author-bio">
+							<h3 class="author_name">Created By <%= course.user.name %></h3>
+							
+						</div>
+						
+					</div>
+					
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <%- include('partials/_footer') -%>
